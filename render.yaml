@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: drupal-on-render
+    env: php
+    buildCommand: "composer install"
+    startCommand: "php -S 0.0.0.0:10000 -t web"
+    plan: free
+    region: oregon
+    branch: master
+    rootDir: .
