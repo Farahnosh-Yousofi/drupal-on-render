@@ -897,15 +897,25 @@ if (getenv('IS_DDEV_PROJECT') == 'true' && file_exists(__DIR__ . '/settings.ddev
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
+/**
+$databases['default']['default'] = [
+  'driver' => 'pgsql',
+  'database' => 'drupal_v5jx', // ✅ Actual DB name from Render
+  'username' => 'drupaluser',  // ✅ Actual username
+  'password' => 'tjvVWhF988lgfcOjhKIy0dhAcfqYKFPQ',  // ✅ Actual password
+  'host' => 'dpg-d1ugmhqdbo4c73ej25dg-a.oregon-postgres.render.com', // ✅ Actual host
+  'port' => '5432',
+  'prefix' => '',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\pgsql',
+];
+*/
 
 $databases['default']['default'] = [
-  'driver' => 'pgsql'
-  'database' => getenv('DB_NAME'),
-  'username' => getenv('DB_USER'),
-  'password' => getenv('DB_PASS'),
-  'host' => getenv('DB_HOST'),
-  'port' => '5432',
-  'driver' => 'mysql',
-  'prefix' => '',
-  'collation' => 'utf8mb4_general_ci',
+  'driver' => 'pgsql',
+  'database' => 'drupal_v5jx',
+  'username' => 'drupaluser',
+  'password' => 'tjvVWhF988lgfcOjhKIy0dhAcfqYKFPQ',
+  'host' => 'dpg-d1ugmhqdbo4c73ej25dg-a.oregon-postgres.render.com',
+  'port' => 5432,
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\pgsql',
 ];
