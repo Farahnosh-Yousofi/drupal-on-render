@@ -917,5 +917,9 @@ $databases['default']['default'] = [
   'password' => 'tjvVWhF988lgfcOjhKIy0dhAcfqYKFPQ',
   'host' => 'dpg-d1ugmhqdbo4c73ej25dg-a.oregon-postgres.render.com',
   'port' => 5432,
+  'prefix' => '',
   'namespace' => 'Drupal\\Core\\Database\\Driver\\pgsql',
+  'pdo' => [
+    'sslmode' => 'require',
+  ],
 ];
