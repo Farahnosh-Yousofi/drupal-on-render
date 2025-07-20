@@ -899,11 +899,12 @@ if (getenv('IS_DDEV_PROJECT') == 'true' && file_exists(__DIR__ . '/settings.ddev
 # }
 
 $databases['default']['default'] = [
-  'database' => 'db',
-  'username' => 'db',
-  'password' => 'db',
-  'host' => 'db',
-  'port' => '3306',
+  'driver' => 'pgsql'
+  'database' => getenv('DB_NAME'),
+  'username' => getenv('DB_USER'),
+  'password' => getenv('DB_PASS'),
+  'host' => getenv('DB_HOST'),
+  'port' => '5432',
   'driver' => 'mysql',
   'prefix' => '',
   'collation' => 'utf8mb4_general_ci',
